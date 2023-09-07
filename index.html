@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CYOA: Forgotten Memories</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"> <!-- CSS LINK -->
+    </head>
+    <body>
+        <div id="top" class="top" name="top">
+            <h1>CYOA: Forgotten Memories</h1>
+            <p class="test"><i>A short experience created by Abigale Crase.</i></p>
+            <div class="warning">
+                <button id="clear-button">New character!</button>
+                <span class="warningText">WARNING: This will remove all of your progress.</span>
+            </div>
+            <div id="player-info" class="player-info" name="player-info">
+                <p><span id="display-name"></span></p>
+            </div>
+         </div>
+         <div id="scene" class="scene" name="scene">
+            <h2>Welcome, adventurer!</h2>
+            <p>To begin, please answer the following questions:</p>
+            <div class="character-input" name="character-input">
+                <!-- add form -->
+                <label for="character-name">What is your character's name?</label>
+                <input id="character-name" type="text" required pattern="[a-zA-Z0-9\s]+">
+            </div>
+            <div class="character-input" name="character-input">
+                <label for="character-hair">What color is your character's hair?</label>
+                <input id="character-hair" type="text" required pattern="[a-zA-Z0-9\s]+">
+            </div>
+            <div class="character-input" name="character-input">
+            <label for="starter-weapon">What is your preferred weapon?</label>
+                <select name="starter-weapon" id="starter-weapon">
+                    <option value="sword">Sword</option>
+                    <option value="rock">Rock</option>
+                    <option value="wand">Wand</option>
+                    <option value="fist">Fists</option>
+                    <option value="yoyo">Yo-yo</option>
+                </select>
+            </div>
+            <button id="start">Start your adventure!</button>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
