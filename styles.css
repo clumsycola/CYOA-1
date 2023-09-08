@@ -30,7 +30,7 @@ h1 {
     font-size: 20px; 
 }
 
-#clear-button, #start {
+#clear-button, #start, #submit-button {
     margin-top: 20px;
     border-radius: 5px;
     background-color: #ad4436;
