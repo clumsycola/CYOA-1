@@ -1,28 +1,52 @@
+:root {
+    --primary: #313F8C;
+    --hover: #5565c2;
+    --titleText: #5B69AB;
+    --background: RGBA(229, 164, 74, 0.7);
+}
+
 body {
     background-color: #e6ebe0;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
     color: #333333;
     display: flex;
     text-align: center;
     justify-content: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
-    color: #ad4436;
+    color: var(--titleText);
     text-shadow: 2px 2px 2px #000000;
     margin: 0;
 }
 
-.top {
-    width: 300px;
+.storyInfo {
+    overflow-y: auto;
+    height: 150px;
+    padding: 10px;
+    text-align: left;
+}
+
+.info, .scene {
     height: 500px;
-    border: 1px solid;
+    border: 2px solid;
+    box-shadow: 1px 1px 10px 5px #000000;
+    background-color: var(--background);
+    margin-top: 20vh;
+    margin-right: 15px; 
     }
 
-.test {
-    margin-bottom: -15px;
-    font-size: 10px;
+.scene {
+    width: 50vh;
+}
 
+.info {
+    width: 35vh;
 }
 
 .player-info p{
@@ -33,8 +57,9 @@ h1 {
 #clear-button, #start, #submit-button {
     margin-top: 20px;
     border-radius: 5px;
-    background-color: #ad4436;
+    background-color: var(--primary);
     font-weight: bold;
+    color:#ffffff;
 }
 
 .warning {
@@ -54,7 +79,7 @@ h1 {
     left: 90%;
     margin: 10px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 1s, visibility 1s;
     z-index: 5;
     border-radius: 5px;
     border: 1px solid #911e1e;
@@ -66,14 +91,12 @@ h1 {
     opacity: 1;
 }
 
-#clear-button:hover, #start:hover {
-    background-color: #f06f5d;
+#clear-button:hover, #start:hover, #submit-button:hover {
+    background-color: var(--hover);
 }
 
-.scene {
-    width: 300px;
-    height: 500px;
-    border: 1px solid;
+#display-name {
+    font-weight: bold;
 }
 
 .character-input {

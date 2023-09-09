@@ -3,7 +3,7 @@
     var characterHairInput = document.querySelector('#character-hair')
     var starterWeaponSelect = document.querySelector('#starter-weapon')
     var content = document.querySelector('#scene')
-    button.addEventListener('click', renderScene);
+    // button.addEventListener('click', renderScene);
 
     const displayName = document.getElementById("display-name");
 
@@ -23,7 +23,9 @@
         }
         content.innerHTML = `
         <h1>${story[story.currentScene].title}</h1>
+        <div class="storyInfo">
         <p>${story[story.currentScene].story}</p>
+        </div>
         ${getInputs()}
         <button id = "submit-button">${text}</button>
         `  
@@ -84,7 +86,7 @@
             input += `
             <div>
             <input data-destination = ${story[story.currentScene].choices[i].destination} id="radio${i}" name="choices" type = "radio" />
-            <label for="radio${i}">${story[story.currentScene].choices[i].choice}</label>
+            <label class="choices" for="radio${i}">${story[story.currentScene].choices[i].choice}</label>
             </div>
             `
          }
