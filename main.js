@@ -1,17 +1,20 @@
+    // Variable Declarations
     var button = document.querySelector('#start');
     var characterNameInput = document.querySelector('#character-name')
+
+    // To be implemented
     var characterHairInput = document.querySelector('#character-hair')
     var starterWeaponSelect = document.querySelector('#starter-weapon')
+
     var content = document.querySelector('#scene')
-    // button.addEventListener('click', renderScene);
 
     const displayName = document.getElementById("display-name");
 
     characterNameInput.addEventListener("input", function () {
-        // Get the input value
+        // Get input
         const name = characterNameInput.value;
     
-        // Display the input value somewhere else
+        // Display input
         displayName.textContent = name;
         localStorage.setItem("name", name); 
     });
@@ -50,6 +53,7 @@
         renderScene()
     }
 
+    // Checks storage
     function characterInfo(){
         if(localStorage.getItem("name") !== null){
             displayName.textContent = localStorage.getItem("name")
@@ -64,6 +68,7 @@
         }
     }
 
+    // Calls storage
     window.onload = function() {
         storage();
     }  
